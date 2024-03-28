@@ -63,10 +63,11 @@ public class Employee {
         return weeklyCompensation;
     }
 
-    public void allocateBonus(double workHours){
+    public double allocateBonus(double workHours){
         double bonus = 0;
         double annualCompensation = this.compensationRate * workHours * 12;
         bonus = bonusRate * annualCompensation;
         System.out.println("You earned a bonus of: $" + bonus + " .We appreciate your contribution to the company's success!");
+        return bonus;
     }
 }

@@ -21,10 +21,11 @@ public class SalariedEmployee extends Employee{
         return monthlyEarnings;
     }
     @Override
-    public void allocateBonus(double workHours){
+    public double allocateBonus(double workHours){
         double bonus = 0;
         double annualCompensation = this.getCompensationRate() * workHours * 12;
         bonus = this.getBonusRate() * annualCompensation;
         System.out.println("You earned a bonus of: $" + bonus + " for the year 2024." + "\n" + "We appreciate your contribution to the company's success!");
+        return bonus;
     }
 }
